@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            var  input= document.getElementById('input');
+            /*当input的数据改变的时候*/
+            input.onchange = function(){
+                /*存一个key为num的数据*/
+                console.log(localStorage);
+                localStorage.input = this.value;
+            };
+        },false);
+    </script>
+</head>
+<body onload="DOMContentLoaded()">
+物品：<input type="number" id="input" min="0" max="10" step="2" value="0">
+</body>
+</html>

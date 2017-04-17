@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+            var price = document.getElementById('price');
+            /*当存储空间中数据发生变化的时候*/
+            window.onstorage = function(ev){
+                /*获取正在变化的数据*/
+                console.log(ev);
+                price.innerHTML = localStorage[ev.key]*20;
+            };
+        },false);
+    </script>
+</head>
+<body>
+物品总价：<strong id="price">0</strong>
+</body>
+</html>
